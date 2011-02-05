@@ -1,0 +1,91 @@
+Mini: All lower case - Overall Accuracy: 98.6
+--------------------------------------
+Class: alt.atheism Accuracy: 100.0
+Class: comp.graphics Accuracy: 100.0
+Class: comp.os.ms-windows.misc Accuracy: 100.0
+Class: comp.sys.ibm.pc.hardware Accuracy: 100.0
+Class: comp.sys.mac.hardware Accuracy: 98.0
+Class: comp.windows.x Accuracy: 98.0
+Class: misc.forsale Accuracy: 88.0
+Class: rec.autos Accuracy: 94.0
+Class: rec.motorcycles Accuracy: 100.0
+Class: rec.sport.baseball Accuracy: 100.0
+Class: rec.sport.hockey Accuracy: 98.0
+Class: sci.crypt Accuracy: 100.0
+Class: sci.electronics Accuracy: 100.0
+Class: sci.med Accuracy: 100.0
+Class: sci.space Accuracy: 100.0
+Class: soc.religion.christian Accuracy: 100.0
+Class: talk.politics.guns Accuracy: 100.0
+Class: talk.politics.mideast Accuracy: 100.0
+Class: talk.politics.misc Accuracy: 98.0
+Class: talk.religion.misc Accuracy: 98.0
+
+Mini: Without lower case - Overall Accuracy: 98.7
+-----------------------------------------
+Class: alt.atheism Accuracy: 100.0
+Class: comp.graphics Accuracy: 100.0
+Class: comp.os.ms-windows.misc Accuracy: 100.0
+Class: comp.sys.ibm.pc.hardware Accuracy: 100.0
+Class: comp.sys.mac.hardware Accuracy: 100.0
+Class: comp.windows.x Accuracy: 98.0
+Class: misc.forsale Accuracy: 86.0
+Class: rec.autos Accuracy: 94.0
+Class: rec.motorcycles Accuracy: 100.0
+Class: rec.sport.baseball Accuracy: 100.0
+Class: rec.sport.hockey Accuracy: 100.0
+Class: sci.crypt Accuracy: 100.0
+Class: sci.electronics Accuracy: 100.0
+Class: sci.med Accuracy: 100.0
+Class: sci.space Accuracy: 100.0
+Class: soc.religion.christian Accuracy: 100.0
+Class: talk.politics.guns Accuracy: 100.0
+Class: talk.politics.mideast Accuracy: 100.0
+Class: talk.politics.misc Accuracy: 98.0
+Class: talk.religion.misc Accuracy: 98.0
+
+Full: Without lower case - Overall Accuracy: 93.48780352280936
+-------------------------------------------
+Class: alt.atheism Accuracy: 94.55555555555556
+Class: comp.graphics Accuracy: 92.22222222222223
+Class: comp.os.ms-windows.misc Accuracy: 92.33333333333333
+Class: comp.sys.ibm.pc.hardware Accuracy: 96.88888888888889
+Class: comp.sys.mac.hardware Accuracy: 95.33333333333333
+Class: comp.windows.x Accuracy: 96.77777777777777
+Class: misc.forsale Accuracy: 77.77777777777777
+Class: rec.autos Accuracy: 95.33333333333333
+Class: rec.motorcycles Accuracy: 97.33333333333333
+Class: rec.sport.baseball Accuracy: 97.66666666666667
+Class: rec.sport.hockey Accuracy: 98.0
+Class: sci.crypt Accuracy: 97.88888888888889
+Class: sci.electronics Accuracy: 95.88888888888889
+Class: sci.med Accuracy: 97.11111111111111
+Class: sci.space Accuracy: 97.0
+Class: soc.religion.christian Accuracy: 98.99665551839465
+Class: talk.politics.guns Accuracy: 96.11111111111111
+Class: talk.politics.mideast Accuracy: 97.44444444444444
+Class: talk.politics.misc Accuracy: 89.11111111111111
+Class: talk.religion.misc Accuracy: 66.0
+
+Full: All lower case - Overall Accuracy: 93.1821970328388
+---------------------------------------------
+Class: alt.atheism Accuracy: 93.77777777777777
+Class: comp.graphics Accuracy: 90.77777777777777
+Class: comp.os.ms-windows.misc Accuracy: 90.88888888888889
+Class: comp.sys.ibm.pc.hardware Accuracy: 96.88888888888889
+Class: comp.sys.mac.hardware Accuracy: 95.0
+Class: comp.windows.x Accuracy: 96.55555555555556
+Class: misc.forsale Accuracy: 77.66666666666667
+Class: rec.autos Accuracy: 95.22222222222223
+Class: rec.motorcycles Accuracy: 97.11111111111111
+Class: rec.sport.baseball Accuracy: 98.0
+Class: rec.sport.hockey Accuracy: 98.0
+Class: sci.crypt Accuracy: 97.66666666666667
+Class: sci.electronics Accuracy: 95.77777777777777
+Class: sci.med Accuracy: 96.88888888888889
+Class: sci.space Accuracy: 96.77777777777777
+Class: soc.religion.christian Accuracy: 98.99665551839465
+Class: talk.politics.guns Accuracy: 96.22222222222223
+Class: talk.politics.mideast Accuracy: 97.44444444444444
+Class: talk.politics.misc Accuracy: 88.77777777777777
+Class: talk.religion.misc Accuracy: 65.22222222222223

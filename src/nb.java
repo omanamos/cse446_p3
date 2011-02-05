@@ -15,7 +15,7 @@ public class nb {
 		int cnt = 0;
 		
 		for(File d : labelFolders){
-			if(d.isDirectory()){
+			if(d.isDirectory() && d.getName() != null){
 				String label = d.getName();
 				trainLabels.put(label, cnt);
 				cnt++;
@@ -28,15 +28,26 @@ public class nb {
 		NaiveBayes b = new NaiveBayes(trainData, trainLabels);
 		
 		File testFolder = new File(args[0]);
-		Map<String, Double> testLabels = new HashMap<String, Double>();
-		List<Document> testData = new ArrayList<Document>();
-		
+		int totalCorrect = 0;
+		int totalOverall = 0;
 		for(File d : testFolder.listFiles()){
 			int correct = 0;
-			if(d.isDirectory()){
+			int total = 0;
+			if(d.isDirectory() && d.getName() != null){
 				String label = d.getName();
-				
+				for(File f : d.listFiles()){
+					total++;
+					String guess = b.classify(new Document(f));
+					if(guess.equals(label))
+						correct++;
+				}
+				double acc = correct * 100.0 / (double)total;
+				System.out.println("Class: " + label + " Accuracy: " + acc);
+				totalCorrect += correct;
+				totalOverall += total;
 			}
 		}
+		double acc = totalCorrect * 100.0 / (double)totalOverall;
+		System.out.println("Overall Accuracy: " + acc);
 	}
 }

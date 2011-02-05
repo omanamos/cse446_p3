@@ -29,14 +29,14 @@ public class NaiveBayes {
 	public String classify(Document d){
 		String maxLabel = null;
 		Double maxProb = 0.0;
-		for(String label : this.prob.keySet()){
+		for(String label : this.prior.keySet()){
 			Double curProb = this.prior.get(label);
 			for(String term : d){
-				if(this.vocab.containsKey(term)){
-					curProb += prob.get(term).get(label);
+				if(this.prob.containsKey(term)){
+					curProb += d.getCount(term) * prob.get(term).get(label);
 				}
 			}
-			if(curProb >= maxProb){
+			if(curProb >= maxProb || maxLabel == null){
 				maxProb = curProb;
 				maxLabel = label;
 			}
@@ -46,16 +46,19 @@ public class NaiveBayes {
 	
 	private void train(Map<String, Map<String, Integer>> vocab){
 		for(String term : vocab.keySet()){
-			if(this.prob.containsKey(term))
+			if(!this.prob.containsKey(term))
 				this.prob.put(term, new HashMap<String, Double>());
-			for(String label : vocab.get(term).keySet()){
+			for(String label : this.prior.keySet()){
 				this.prob.get(term).put(label, getProb(term, label));
 			}
 		}
 	}
 	
 	private Double getProb(String term, String label){
-		return Utils.log(((double)this.vocab.get(term).get(label) + 1.0) / (double)(this.denoms.get(label) + this.vocab.size()), 10);
+		Integer nk = this.vocab.get(term).get(label);
+		nk = nk == null ? 0 : nk;
+		Integer n = this.denoms.get(label);
+		return Utils.log(((double)nk + 1.0) / (double)(n + this.vocab.size()), 10);
 	}
 	
 	private Map<String, List<TrainingDocument>> buildVocab(List<TrainingDocument> docs, Map<String, Integer> labels){
@@ -71,6 +74,8 @@ public class NaiveBayes {
 				if(!this.vocab.containsKey(t))
 					this.vocab.put(t, new HashMap<String, Integer>());
 				Map<String, Integer> cnts = this.vocab.get(t);
+				if(!cnts.containsKey(d.getLabel()))
+					cnts.put(d.getLabel(), 0);
 				cnts.put(d.getLabel(), cnts.get(d.getLabel()) + 1);
 				
 				cnt++;

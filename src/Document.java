@@ -23,10 +23,12 @@ public class Document implements Iterable<String> {
 				else if(!isHeader){
 					String[] tokens = line.split(" ");
 					for(String t : tokens){
-						t = t.trim();
-						if(!counts.containsKey(t))
-							counts.put(t, 0);
-						counts.put(t, counts.get(t) + 1);
+						t = t.trim().toLowerCase();
+						if(t.length() != 0){
+							if(!counts.containsKey(t))
+								counts.put(t, 0);
+							counts.put(t, counts.get(t) + 1);
+						}
 					}
 				}
 			}
