@@ -27,7 +27,7 @@ public class nb {
 		
 		NaiveBayes b = new NaiveBayes(trainData, trainLabels);
 		
-		File testFolder = new File(args[0]);
+		File testFolder = new File(args[1]);
 		int totalCorrect = 0;
 		int totalOverall = 0;
 		for(File d : testFolder.listFiles()){

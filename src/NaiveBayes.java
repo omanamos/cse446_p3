@@ -78,7 +78,7 @@ public class NaiveBayes {
 					cnts.put(d.getLabel(), 0);
 				cnts.put(d.getLabel(), cnts.get(d.getLabel()) + 1);
 				
-				cnt++;
+				cnt += d.getCount(t);
 			}
 			
 			if(!this.denoms.containsKey(d.getLabel()))
