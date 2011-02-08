@@ -12,7 +12,9 @@ java nb [training folder path] [test folder path]
 
 If you are running the program on the large dataset, you may need to expand
 the size of the default java heap size, depending on the environment you are
-running it in.
+running it in. Also, when running from the command line I would sometimes get
+errors about there being too many open files when running on the large data
+set, however I did not receive these errors when running in eclipse.
 
 ===========================================================
 Code Organization
