@@ -4,6 +4,15 @@ CSE 446 - Project 3: Part 1
 ===========================================================
 Compile and Run Instructions
 ===========================================================
+Compile all the java files by running:
+>javac Document.java TrainingDocument.java NaiveBayes.java Pair.java nb.java
+
+Run the application by typing the command
+java nb [training folder path] [test folder path]
+
+If you are running the program on the large dataset, you may need to expand
+the size of the default java heap size, depending on the environment you are
+running it in.
 
 ===========================================================
 Code Organization

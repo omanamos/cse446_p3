@@ -5,9 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-
 public class nb {
-	private static final boolean DEBUG = true;
+	private static final boolean DEBUG = false;
 	
 	public static void main(String[] args){
 		if(args.length != 2)
