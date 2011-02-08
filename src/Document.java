@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class Document implements Iterable<String> {
 	
+	/**
+	 * word -> number of times the given word occurs in this document
+	 */
 	private Map<String, Integer> counts;
 	
 	public Document(File f){
@@ -18,13 +21,13 @@ public class Document implements Iterable<String> {
 			
 			while(s.hasNextLine()){
 				String line = s.nextLine().trim();
-				if(isHeader && line.length() == 0)
+				if(isHeader && line.length() == 0) //Is the header over yet?
 					isHeader = false;
 				else if(!isHeader){
 					String[] tokens = line.split(" ");
 					for(String t : tokens){
-						t = t.trim().toLowerCase();
-						if(t.length() != 0){
+						t = t.trim().toLowerCase(); //remove whitespace and lower-case word
+						if(t.length() != 0){ //don't add empty strings
 							if(!counts.containsKey(t))
 								counts.put(t, 0);
 							counts.put(t, counts.get(t) + 1);
@@ -37,6 +40,10 @@ public class Document implements Iterable<String> {
 		}
 	}
 	
+	/**
+	 * @param token word to look up
+	 * @return number of times the given token occurs in this document
+	 */
 	public Integer getCount(String token){
 		if(!this.counts.containsKey(token))
 			return 0;
@@ -44,6 +51,9 @@ public class Document implements Iterable<String> {
 			return this.counts.get(token);
 	}
 	
+	/**
+	 * Iterates over all of the unique words in the document
+	 */
 	public Iterator<String> iterator(){
 		return this.counts.keySet().iterator();
 	}

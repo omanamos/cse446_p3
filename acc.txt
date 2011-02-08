@@ -1,0 +1,137 @@
+****************************
+Test Set Accuracy
+****************************
+Mini: All lower case - Overall Accuracy: 50.68627450980392
+--------------------------------------
+Class: alt.atheism Accuracy: 49.01960784313726
+	Incorrectly guessed class: soc.religion.christian 0.29411764705882354 percent of the time.
+Class: comp.graphics Accuracy: 27.45098039215686
+	Incorrectly guessed class: comp.os.ms-windows.misc 0.17647058823529413 percent of the time.
+	Incorrectly guessed class: sci.electronics 0.1568627450980392 percent of the time.
+	Incorrectly guessed class: talk.politics.guns 0.1568627450980392 percent of the time.
+Class: comp.os.ms-windows.misc Accuracy: 49.01960784313726
+	Incorrectly guessed class: comp.sys.ibm.pc.hardware 0.11764705882352941 percent of the time.
+Class: comp.sys.ibm.pc.hardware Accuracy: 50.98039215686274
+	Incorrectly guessed class: comp.sys.mac.hardware 0.19607843137254902 percent of the time.
+Class: comp.sys.mac.hardware Accuracy: 66.66666666666667
+	Incorrectly guessed class: comp.sys.ibm.pc.hardware 0.11764705882352941 percent of the time.
+Class: comp.windows.x Accuracy: 27.45098039215686
+	Incorrectly guessed class: comp.os.ms-windows.misc 0.13725490196078433 percent of the time.
+	Incorrectly guessed class: comp.sys.ibm.pc.hardware 0.13725490196078433 percent of the time.
+	Incorrectly guessed class: comp.sys.mac.hardware 0.11764705882352941 percent of the time.
+	Incorrectly guessed class: sci.electronics 0.11764705882352941 percent of the time.
+Class: misc.forsale Accuracy: 29.41176470588235
+	Incorrectly guessed class: sci.electronics 0.19607843137254902 percent of the time.
+	Incorrectly guessed class: comp.sys.ibm.pc.hardware 0.1568627450980392 percent of the time.
+	Incorrectly guessed class: comp.sys.mac.hardware 0.13725490196078433 percent of the time.
+Class: rec.autos Accuracy: 23.529411764705884
+	Incorrectly guessed class: talk.politics.guns 0.27450980392156865 percent of the time.
+	Incorrectly guessed class: soc.religion.christian 0.13725490196078433 percent of the time.
+	Incorrectly guessed class: sci.electronics 0.11764705882352941 percent of the time.
+Class: rec.motorcycles Accuracy: 56.86274509803921
+	Incorrectly guessed class: talk.politics.guns 0.17647058823529413 percent of the time.
+	Incorrectly guessed class: soc.religion.christian 0.11764705882352941 percent of the time.
+Class: rec.sport.baseball Accuracy: 54.90196078431372
+	Incorrectly guessed class: talk.politics.guns 0.13725490196078433 percent of the time.
+	Incorrectly guessed class: soc.religion.christian 0.13725490196078433 percent of the time.
+Class: rec.sport.hockey Accuracy: 31.372549019607842
+	Incorrectly guessed class: rec.sport.baseball 0.3333333333333333 percent of the time.
+	Incorrectly guessed class: talk.politics.guns 0.13725490196078433 percent of the time.
+Class: sci.crypt Accuracy: 76.47058823529412
+	Incorrectly guessed class: talk.politics.guns 0.11764705882352941 percent of the time.
+Class: sci.electronics Accuracy: 56.86274509803921
+Class: sci.med Accuracy: 68.62745098039215
+	Incorrectly guessed class: soc.religion.christian 0.17647058823529413 percent of the time.
+Class: sci.space Accuracy: 76.47058823529412
+Class: soc.religion.christian Accuracy: 90.19607843137256
+Class: talk.politics.guns Accuracy: 78.43137254901961
+	Incorrectly guessed class: soc.religion.christian 0.11764705882352941 percent of the time.
+Class: talk.politics.mideast Accuracy: 62.745098039215684
+	Incorrectly guessed class: talk.politics.guns 0.19607843137254902 percent of the time.
+	Incorrectly guessed class: soc.religion.christian 0.1568627450980392 percent of the time.
+Class: talk.politics.misc Accuracy: 19.607843137254903
+	Incorrectly guessed class: talk.politics.guns 0.5686274509803921 percent of the time.
+Class: talk.religion.misc Accuracy: 17.647058823529413
+	Incorrectly guessed class: soc.religion.christian 0.29411764705882354 percent of the time.
+	Incorrectly guessed class: alt.atheism 0.27450980392156865 percent of the time.
+	Incorrectly guessed class: talk.politics.guns 0.21568627450980393 percent of the time.
+
+Full: All lower case - Overall Accuracy: 81.65
+---------------------------------------
+Class: alt.atheism Accuracy: 82.0
+	Incorrectly guessed class: talk.religion.misc 0.11 percent of the time.
+Class: comp.graphics Accuracy: 69.0
+	Incorrectly guessed class: comp.sys.ibm.pc.hardware 0.11 percent of the time.
+Class: comp.os.ms-windows.misc Accuracy: 71.0
+	Incorrectly guessed class: comp.sys.ibm.pc.hardware 0.14 percent of the time.
+Class: comp.sys.ibm.pc.hardware Accuracy: 80.0
+Class: comp.sys.mac.hardware Accuracy: 88.0
+Class: comp.windows.x Accuracy: 74.0
+Class: misc.forsale Accuracy: 58.0
+Class: rec.autos Accuracy: 91.0
+Class: rec.motorcycles Accuracy: 95.0
+Class: rec.sport.baseball Accuracy: 94.0
+Class: rec.sport.hockey Accuracy: 92.0
+Class: sci.crypt Accuracy: 96.0
+Class: sci.electronics Accuracy: 89.0
+Class: sci.med Accuracy: 93.0
+Class: sci.space Accuracy: 93.0
+Class: soc.religion.christian Accuracy: 88.0
+Class: talk.politics.guns Accuracy: 91.0
+Class: talk.politics.mideast Accuracy: 84.0
+Class: talk.politics.misc Accuracy: 68.0
+	Incorrectly guessed class: talk.religion.misc 0.11 percent of the time.
+Class: talk.religion.misc Accuracy: 37.0
+	Incorrectly guessed class: alt.atheism 0.38 percent of the time.
+	Incorrectly guessed class: talk.politics.misc 0.11 percent of the time.
+
+****************************
+Training Set Accuracy
+****************************
+
+Mini: All lower case - Overall Accuracy: 98.8
+--------------------------------------------
+Class: alt.atheism Accuracy: 100.0
+Class: comp.graphics Accuracy: 98.0
+Class: comp.os.ms-windows.misc Accuracy: 100.0
+Class: comp.sys.ibm.pc.hardware Accuracy: 100.0
+Class: comp.sys.mac.hardware Accuracy: 98.0
+Class: comp.windows.x Accuracy: 96.0
+Class: misc.forsale Accuracy: 96.0
+Class: rec.autos Accuracy: 96.0
+Class: rec.motorcycles Accuracy: 100.0
+Class: rec.sport.baseball Accuracy: 100.0
+Class: rec.sport.hockey Accuracy: 100.0
+Class: sci.crypt Accuracy: 100.0
+Class: sci.electronics Accuracy: 100.0
+Class: sci.med Accuracy: 100.0
+Class: sci.space Accuracy: 100.0
+Class: soc.religion.christian Accuracy: 100.0
+Class: talk.politics.guns Accuracy: 100.0
+Class: talk.politics.mideast Accuracy: 98.0
+Class: talk.politics.misc Accuracy: 96.0
+Class: talk.religion.misc Accuracy: 98.0
+
+Full: All lower case - Overall Accuracy: 93.82119242095905
+--------------------------------------------
+Class: alt.atheism Accuracy: 95.33333333333333
+Class: comp.graphics Accuracy: 91.11111111111111
+Class: comp.os.ms-windows.misc Accuracy: 93.66666666666667
+Class: comp.sys.ibm.pc.hardware Accuracy: 97.22222222222223
+Class: comp.sys.mac.hardware Accuracy: 97.0
+Class: comp.windows.x Accuracy: 93.33333333333333
+Class: misc.forsale Accuracy: 84.11111111111111
+Class: rec.autos Accuracy: 97.0
+Class: rec.motorcycles Accuracy: 98.22222222222223
+Class: rec.sport.baseball Accuracy: 99.0
+Class: rec.sport.hockey Accuracy: 98.0
+Class: sci.crypt Accuracy: 98.0
+Class: sci.electronics Accuracy: 97.0
+Class: sci.med Accuracy: 97.55555555555556
+Class: sci.space Accuracy: 97.88888888888889
+Class: soc.religion.christian Accuracy: 98.10479375696767
+Class: talk.politics.guns Accuracy: 97.44444444444444
+Class: talk.politics.mideast Accuracy: 94.77777777777777
+Class: talk.politics.misc Accuracy: 83.77777777777777
+Class: talk.religion.misc Accuracy: 67.88888888888889
+	Incorrectly guessed class: alt.atheism 0.18444444444444444 percent of the time.

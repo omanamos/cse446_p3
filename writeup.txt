@@ -1,91 +1,111 @@
-Mini: All lower case - Overall Accuracy: 98.6
---------------------------------------
-Class: alt.atheism Accuracy: 100.0
-Class: comp.graphics Accuracy: 100.0
-Class: comp.os.ms-windows.misc Accuracy: 100.0
-Class: comp.sys.ibm.pc.hardware Accuracy: 100.0
-Class: comp.sys.mac.hardware Accuracy: 98.0
-Class: comp.windows.x Accuracy: 98.0
-Class: misc.forsale Accuracy: 88.0
-Class: rec.autos Accuracy: 94.0
-Class: rec.motorcycles Accuracy: 100.0
-Class: rec.sport.baseball Accuracy: 100.0
-Class: rec.sport.hockey Accuracy: 98.0
-Class: sci.crypt Accuracy: 100.0
-Class: sci.electronics Accuracy: 100.0
-Class: sci.med Accuracy: 100.0
-Class: sci.space Accuracy: 100.0
-Class: soc.religion.christian Accuracy: 100.0
-Class: talk.politics.guns Accuracy: 100.0
-Class: talk.politics.mideast Accuracy: 100.0
-Class: talk.politics.misc Accuracy: 98.0
-Class: talk.religion.misc Accuracy: 98.0
+Ryan Oman
+CSE 446 - Project 3: Part 1
 
-Mini: Without lower case - Overall Accuracy: 98.7
------------------------------------------
-Class: alt.atheism Accuracy: 100.0
-Class: comp.graphics Accuracy: 100.0
-Class: comp.os.ms-windows.misc Accuracy: 100.0
-Class: comp.sys.ibm.pc.hardware Accuracy: 100.0
-Class: comp.sys.mac.hardware Accuracy: 100.0
-Class: comp.windows.x Accuracy: 98.0
-Class: misc.forsale Accuracy: 86.0
-Class: rec.autos Accuracy: 94.0
-Class: rec.motorcycles Accuracy: 100.0
-Class: rec.sport.baseball Accuracy: 100.0
-Class: rec.sport.hockey Accuracy: 100.0
-Class: sci.crypt Accuracy: 100.0
-Class: sci.electronics Accuracy: 100.0
-Class: sci.med Accuracy: 100.0
-Class: sci.space Accuracy: 100.0
-Class: soc.religion.christian Accuracy: 100.0
-Class: talk.politics.guns Accuracy: 100.0
-Class: talk.politics.mideast Accuracy: 100.0
-Class: talk.politics.misc Accuracy: 98.0
-Class: talk.religion.misc Accuracy: 98.0
+===========================================================
+Compile and Run Instructions
+===========================================================
 
-Full: Without lower case - Overall Accuracy: 93.48780352280936
--------------------------------------------
-Class: alt.atheism Accuracy: 94.55555555555556
-Class: comp.graphics Accuracy: 92.22222222222223
-Class: comp.os.ms-windows.misc Accuracy: 92.33333333333333
-Class: comp.sys.ibm.pc.hardware Accuracy: 96.88888888888889
-Class: comp.sys.mac.hardware Accuracy: 95.33333333333333
-Class: comp.windows.x Accuracy: 96.77777777777777
-Class: misc.forsale Accuracy: 77.77777777777777
-Class: rec.autos Accuracy: 95.33333333333333
-Class: rec.motorcycles Accuracy: 97.33333333333333
-Class: rec.sport.baseball Accuracy: 97.66666666666667
-Class: rec.sport.hockey Accuracy: 98.0
-Class: sci.crypt Accuracy: 97.88888888888889
-Class: sci.electronics Accuracy: 95.88888888888889
-Class: sci.med Accuracy: 97.11111111111111
-Class: sci.space Accuracy: 97.0
-Class: soc.religion.christian Accuracy: 98.99665551839465
-Class: talk.politics.guns Accuracy: 96.11111111111111
-Class: talk.politics.mideast Accuracy: 97.44444444444444
-Class: talk.politics.misc Accuracy: 89.11111111111111
-Class: talk.religion.misc Accuracy: 66.0
+===========================================================
+Code Organization
+===========================================================
+	Document class
+	-------------------------------------------------------
+	This class is an abstraction layer on a File object. It
+	reads in the file given to the constructor and creates 
+	a Hash of the words in the file. The key of the Hash is
+	a normalized(lower-case) word in the file and the value
+	is the number of times that word occurs in the file.
+	The Document does not count words until after the first
+	empty line the file, which signifies the end of the 
+	header of the file. After that, it breaks apart words 
+	by whitespace only(spaces and newlines).
+	
+	TrainingDocument class
+	-------------------------------------------------------
+	This subclasses the Document class and contains the 
+	extra String field "label", which allows the algorithm
+	to train on this document, since it knows the file's 
+	classification.
+	
+	NaiveBayes class
+	-------------------------------------------------------
+	This class implements the Naive Bayes learning 
+	algorithm. It builds its probabilities based on the 
+	given TrainingDocuments.
+	
+	nb class
+	-------------------------------------------------------
+	This is the main class for the application. It loads in
+	the files and prints out accuracies and results.
+	
+	Pair class
+	-------------------------------------------------------
+	This is a wrapper class for a String and an Integer 
+	that I used for testing.
+	
+===========================================================
+Accuracy
+===========================================================
+	Mini Dataset
+	-------------------------------------------------------
+	Training Accuracy: 98.8%
+	Test Accuracy: 50.68%
+	
+	Large Dataset
+	-------------------------------------------------------
+	Training Accuracy: 93.82%
+	Test Accuracy: 81.65%
 
-Full: All lower case - Overall Accuracy: 93.1821970328388
----------------------------------------------
-Class: alt.atheism Accuracy: 93.77777777777777
-Class: comp.graphics Accuracy: 90.77777777777777
-Class: comp.os.ms-windows.misc Accuracy: 90.88888888888889
-Class: comp.sys.ibm.pc.hardware Accuracy: 96.88888888888889
-Class: comp.sys.mac.hardware Accuracy: 95.0
-Class: comp.windows.x Accuracy: 96.55555555555556
-Class: misc.forsale Accuracy: 77.66666666666667
-Class: rec.autos Accuracy: 95.22222222222223
-Class: rec.motorcycles Accuracy: 97.11111111111111
-Class: rec.sport.baseball Accuracy: 98.0
-Class: rec.sport.hockey Accuracy: 98.0
-Class: sci.crypt Accuracy: 97.66666666666667
-Class: sci.electronics Accuracy: 95.77777777777777
-Class: sci.med Accuracy: 96.88888888888889
-Class: sci.space Accuracy: 96.77777777777777
-Class: soc.religion.christian Accuracy: 98.99665551839465
-Class: talk.politics.guns Accuracy: 96.22222222222223
-Class: talk.politics.mideast Accuracy: 97.44444444444444
-Class: talk.politics.misc Accuracy: 88.77777777777777
-Class: talk.religion.misc Accuracy: 65.22222222222223
+===========================================================
+Class Characteristics
+===========================================================
+	Mini Dataset
+	-------------------------------------------------------
+	****************
+	Easy to Classify
+	****************
+	soc.religion.christian - had the highest accuracy on 
+	the test set at 90.2%.
+	
+	sci.crypt - also had a high accuracy on the test set 
+	at 76.47%.
+	
+	sci.space - also had a high accuracy on the test set 
+	at 76.47%.
+		
+	****************
+	Hard to Classify
+	****************
+	talk.religion.misc - had the lowest accuracy on the 
+	test set at 17.65%. It was easily confused with: 
+		- soc.religion.christian: 29.41% of guesses made
+		- alt.atheism: 27.45% of guesses made
+		- talk.politics.guns: 21.57% of guesses made
+	
+	talk.politics.misc - also had a very low accuracy on 
+	the test set at 19.61%. It was easily confused with:
+		- talk.politics.guns: 56.86% of guesses made
+	
+	Large Dataset
+	-------------------------------------------------------
+	****************
+	Easy to Classify
+	****************
+	All of the follwing classes had very high accuracy on 
+	the test set and were very easy to guess:
+		Class: sci.crypt Accuracy: 96.0
+		Class: rec.motorcycles Accuracy: 95.0
+		Class: rec.sport.baseball Accuracy: 94.0
+		Class: sci.med Accuracy: 93.0
+		Class: sci.space Accuracy: 93.0
+		Class: rec.sport.hockey Accuracy: 92.0
+		Class: rec.autos Accuracy: 91.0
+		Class: talk.politics.guns Accuracy: 91.0
+	
+	****************
+	Hard to Classify
+	****************
+	talk.religion.misc - had the lowest accuracy on the 
+	test set at 37%. It was easily confused with:
+		alt.atheism: 38% of guesses made
+		talk.politics.misc: 11% of guesses made
