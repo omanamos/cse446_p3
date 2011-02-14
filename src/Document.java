@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -11,14 +10,13 @@ import java.util.Map;
 import java.util.Scanner;
 
 import edu.stanford.nlp.ling.HasWord;
-import edu.stanford.nlp.ling.Sentence;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 
 public class Document implements Iterable<String> {
 	private enum Rule {NORM, POS};
-	private static final Rule TYPE = Rule.POS;
+	private static final Rule TYPE = Rule.NORM;
 	/**
 	 * word -> number of times the given word occurs in this document
 	 */
@@ -28,8 +26,10 @@ public class Document implements Iterable<String> {
 		switch(TYPE){
 		case NORM:
 			this.counts = buildNorm(f);
+			break;
 		case POS:
 			this.counts = buildPos(f);
+			break;
 		}
 	}
 	
@@ -65,8 +65,7 @@ public class Document implements Iterable<String> {
 		Map<String, Integer> rtn = new HashMap<String, Integer>();
 		try{
 			MaxentTagger tagger = new MaxentTagger("pos_tagger/models/left3words-wsj-0-18.tagger");
-		    @SuppressWarnings("unchecked")
-		    List<ArrayList<? extends HasWord>> sentences = tagger.tokenizeText(new BufferedReader(new FileReader(f)));
+		    List<ArrayList<? extends HasWord>> sentences = MaxentTagger.tokenizeText(new BufferedReader(new FileReader(f)));
 		    for (ArrayList<? extends HasWord> sentence : sentences) {
 		    	ArrayList<TaggedWord> tSentence = tagger.tagSentence(sentence);
 		    	for(TaggedWord w : tSentence){

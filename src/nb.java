@@ -30,8 +30,7 @@ public class nb {
 		//Train the classifier.
 		NaiveBayes b = new NaiveBayes(trainData);
 		
-		//Run the algoritm on the test data.
-		File testFolder = new File(args[1]);
+		File testFolder = new File(args[0]);
 		int totalCorrect = 0;
 		int totalOverall = 0;
 		for(File d : testFolder.listFiles()){
@@ -62,7 +61,41 @@ public class nb {
 			}
 		}
 		double acc = totalCorrect * 100.0 / (double)totalOverall;
-		System.out.println("Overall Accuracy: " + acc);
+		System.out.println("Training Accuracy: " + acc);
+		
+		//Run the algoritm on the test data.
+		testFolder = new File(args[1]);
+		totalCorrect = 0;
+		totalOverall = 0;
+		for(File d : testFolder.listFiles()){
+			int correct = 0;
+			int total = 0;
+			Map<String, Integer> mcc = new HashMap<String, Integer>();
+			
+			if(d.isDirectory() && d.getName() != null){
+				String label = d.getName();
+				for(File f : d.listFiles()){
+					total++;
+					String guess = b.classify(new Document(f));
+					if(guess.equals(label))
+						correct++;
+					else{
+						if(!mcc.containsKey(guess))
+							mcc.put(guess, 0);
+						mcc.put(guess, mcc.get(guess) + 1);
+					}
+				}
+				acc = correct * 100.0 / (double)total;
+				if(DEBUG){
+					System.out.println("Class: " + label + " Accuracy: " + acc);
+					printErrors(mcc, total);
+				}
+				totalCorrect += correct;
+				totalOverall += total;
+			}
+		}
+		acc = totalCorrect * 100.0 / (double)totalOverall;
+		System.out.println("Test Accuracy: " + acc);
 	}
 	
 	/**
